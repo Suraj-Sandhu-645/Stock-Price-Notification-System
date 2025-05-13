@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: stock-alert-db
+    environment:
+      POSTGRES_DB: stock_alert
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+#    volumes:
+#      - pgdata:/var/lib/postgresql/data
+
+
+
+#Note :::
+#
+#  Yes, it is possible to change the username and password of a database when setting up environment variables in a Docker Compose file.
+#  However, keep the following points in mind:
+#
+#  1. Ensure that no active connections are established with the database before making changes. If a connection is open,
+#  disconnect it—this can be done by closing any connected applications, such as PGAdmin for PostgreSQL.
+#
+#
+#  2. Once the connection is closed, rebuild the Docker Compose setup. This allows the new credentials (username and password)
+#  to take effect and stay in sync with your application
