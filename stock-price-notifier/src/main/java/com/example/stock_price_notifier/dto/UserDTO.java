@@ -16,7 +16,7 @@ public class UserDTO {
 
     private String email;
 
-    private List<WatchlistItemDTO> watchlist;
+//    private List<WatchlistItemDTO> watchlist;
 
 }
 

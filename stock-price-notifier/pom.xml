@@ -75,10 +75,43 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+        </dependency>
+
+<!--        Springfox Swagger:-->
+
+<!--        Use it if you’re on an older Spring Boot version.-->
+
+<!--        Might have some compatibility issues with Spring Boot 2.x (especially with Spring WebFlux).-->
+
+<!--        Springdoc OpenAPI:-->
+
+<!--        Recommended for Spring Boot 2.x or later.-->
+
+<!--        More modern and actively maintained.-->
+
+<!--        Works smoothly with Spring Boot 2.x and Spring WebFlux.-->
+
+
+<!--        <dependency>-->
+<!--            <groupId>org.springdoc</groupId>-->
+<!--            <artifactId>springdoc-openapi-ui</artifactId>-->
+<!--            <version>1.8.0</version>-->
+<!--        </dependency>-->
+
+<!--        | Dependency                            | For Spring Boot | Swagger Version | Recommended?    |-->
+<!--        | -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; | -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; | -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; | -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; |-->
+<!--        | `springdoc-openapi-starter-webmvc-ui` | 2.6+ or 3.x     | OpenAPI 3       | ✅ Yes           |-->
+<!--        | `springdoc-openapi-ui`                | ≤ 2.5           | OpenAPI 3       | ⚠️ Okay (older) |-->
+<!--        | `springfox-boot-starter`              | ≤ 2.5           | Swagger 2       | ❌ Legacy Only   |-->
+
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.5.0</version>
         </dependency>
 
 

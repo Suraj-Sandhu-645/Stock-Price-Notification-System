@@ -24,7 +24,7 @@ public class ObjectMapperConfig {
                 .build();
     }
 
-    public WatchlistItemDTO watchlistItemDtoToWatchlistItemEntity(WatchlistItemEntity watchlistItemEntity){
+    public WatchlistItemDTO watchlistItemEntityToWatchlistItemDTO(WatchlistItemEntity watchlistItemEntity){
         return WatchlistItemDTO.builder()
                 .id(watchlistItemEntity.getId())
                 .symbol(watchlistItemEntity.getSymbol())
@@ -33,7 +33,7 @@ public class ObjectMapperConfig {
                 .build();
     }
 
-    public WatchlistItemEntity watchlistItemEntityToWatchlistItemDTO(WatchlistItemDTO watchlistItemDTO){
+    public WatchlistItemEntity watchlistItemDtoToWatchlistItemEntity(WatchlistItemDTO watchlistItemDTO){
         return WatchlistItemEntity.builder()
                 .symbol(watchlistItemDTO.getSymbol())
                 .lowerThreshold(watchlistItemDTO.getLowerThreshold())

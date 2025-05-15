@@ -1,9 +1,7 @@
 package com.example.stock_price_notifier.entity;
 
-import com.example.stock_price_notifier.dto.WatchlistItemDTO;
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 import java.util.List;
 
@@ -11,6 +9,8 @@ import java.util.List;
 @Table(name = "user_entity")
 @Builder
 @Getter
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class UserEntity {
 
     @Id
@@ -21,5 +21,19 @@ public class UserEntity {
 
     private String email;
 
-//    private List<WatchlistItemEntity> watchlist;
+    @Setter
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<WatchlistItemEntity> watchlist;
 }
+
+//@RequiredArgsConstructor
+//✅ What it does:
+//Generates a constructor for all final fields and fields annotated with @NonNull.
+
+//@AllArgsConstructor
+//✅ What it does:
+//Generates a constructor with all fields (regardless of final, static, or nullable status).
+
+//@NoArgsConstructor
+//✅ What it does:
+//Generates a constructor with no arguments (i.e., a default constructor).
