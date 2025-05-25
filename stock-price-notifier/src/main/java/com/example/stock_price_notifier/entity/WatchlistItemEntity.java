@@ -11,18 +11,18 @@ import lombok.*;
 @AllArgsConstructor
 public class WatchlistItemEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private String symbol;
+  private String symbol;
 
-    private Double upperThreshold;
+  private Double upperThreshold;
 
-    private Double lowerThreshold;
+  private Double lowerThreshold;
 
-    @Setter
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private UserEntity user;
+  @Setter
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "user_id")
+  private UserEntity user;
 }

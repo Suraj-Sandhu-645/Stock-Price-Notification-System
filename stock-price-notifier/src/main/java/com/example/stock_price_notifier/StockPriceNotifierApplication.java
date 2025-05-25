@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class StockPriceNotifierApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(StockPriceNotifierApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(StockPriceNotifierApplication.class, args);
+  }
 }

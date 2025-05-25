@@ -9,35 +9,34 @@ import org.springframework.stereotype.Component;
 @Component
 public class ObjectMapperConfig {
 
-    public UserEntity userDtoToUserEntity(UserDTO userDTO){
-        return UserEntity.builder()
-                .email(userDTO.getEmail())
-                .name(userDTO.getName())
-                .build();
-    }
+  public UserEntity userDtoToUserEntity(UserDTO userDTO) {
+    return UserEntity.builder().email(userDTO.getEmail()).name(userDTO.getName()).build();
+  }
 
-    public UserDTO userEntityToUserDto(UserEntity userEntity){
-        return UserDTO.builder()
-                .id(userEntity.getId())
-                .email(userEntity.getEmail())
-                .name(userEntity.getName())
-                .build();
-    }
+  public UserDTO userEntityToUserDto(UserEntity userEntity) {
+    return UserDTO.builder()
+        .id(userEntity.getId())
+        .email(userEntity.getEmail())
+        .name(userEntity.getName())
+        .build();
+  }
 
-    public WatchlistItemDTO watchlistItemEntityToWatchlistItemDTO(WatchlistItemEntity watchlistItemEntity){
-        return WatchlistItemDTO.builder()
-                .id(watchlistItemEntity.getId())
-                .symbol(watchlistItemEntity.getSymbol())
-                .lowerThreshold(watchlistItemEntity.getLowerThreshold())
-                .upperThreshold(watchlistItemEntity.getUpperThreshold())
-                .build();
-    }
+  public WatchlistItemDTO watchlistItemEntityToWatchlistItemDTO(
+      WatchlistItemEntity watchlistItemEntity) {
+    return WatchlistItemDTO.builder()
+        .id(watchlistItemEntity.getId())
+        .symbol(watchlistItemEntity.getSymbol())
+        .lowerThreshold(watchlistItemEntity.getLowerThreshold())
+        .upperThreshold(watchlistItemEntity.getUpperThreshold())
+        .build();
+  }
 
-    public WatchlistItemEntity watchlistItemDtoToWatchlistItemEntity(WatchlistItemDTO watchlistItemDTO){
-        return WatchlistItemEntity.builder()
-                .symbol(watchlistItemDTO.getSymbol())
-                .lowerThreshold(watchlistItemDTO.getLowerThreshold())
-                .upperThreshold(watchlistItemDTO.getUpperThreshold())
-                .build();
-    }
+  public WatchlistItemEntity watchlistItemDtoToWatchlistItemEntity(
+      WatchlistItemDTO watchlistItemDTO) {
+    return WatchlistItemEntity.builder()
+        .symbol(watchlistItemDTO.getSymbol())
+        .lowerThreshold(watchlistItemDTO.getLowerThreshold())
+        .upperThreshold(watchlistItemDTO.getUpperThreshold())
+        .build();
+  }
 }

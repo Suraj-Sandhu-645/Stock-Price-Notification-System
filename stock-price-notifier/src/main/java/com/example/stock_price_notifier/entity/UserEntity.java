@@ -1,9 +1,8 @@
 package com.example.stock_price_notifier.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
-
 import java.util.List;
+import lombok.*;
 
 @Entity
 @Table(name = "user_entity")
@@ -13,27 +12,27 @@ import java.util.List;
 @AllArgsConstructor
 public class UserEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private String name;
+  private String name;
 
-    private String email;
+  private String email;
 
-    @Setter
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<WatchlistItemEntity> watchlist;
+  @Setter
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+  private List<WatchlistItemEntity> watchlist;
 }
 
-//@RequiredArgsConstructor
-//✅ What it does:
-//Generates a constructor for all final fields and fields annotated with @NonNull.
+// @RequiredArgsConstructor
+// ✅ What it does:
+// Generates a constructor for all final fields and fields annotated with @NonNull.
 
-//@AllArgsConstructor
-//✅ What it does:
-//Generates a constructor with all fields (regardless of final, static, or nullable status).
+// @AllArgsConstructor
+// ✅ What it does:
+// Generates a constructor with all fields (regardless of final, static, or nullable status).
 
-//@NoArgsConstructor
-//✅ What it does:
-//Generates a constructor with no arguments (i.e., a default constructor).
+// @NoArgsConstructor
+// ✅ What it does:
+// Generates a constructor with no arguments (i.e., a default constructor).

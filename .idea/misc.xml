@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/stock-price-notifier/pom.xml" />
+        <option value="$PROJECT_DIR$/stock-feed-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/alert-and-notification/pom.xml" />
+        <option value="$PROJECT_DIR$/common-events/pom.xml" />
       </list>
     </option>
   </component>
